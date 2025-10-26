@@ -32,7 +32,7 @@ export function CreateContentModal({open, onClose}: any){
         
     }
     return <div>
-        {open && <div className="w-screen h-screen bg-slate-500/50 fixed top-0 left-0 backdrop-blur-none flex justify-center items-center">
+        {open && <div className=" w-screen h-screen bg-slate-500/50 fixed top-0 left-0 backdrop-blur-none flex justify-center items-center">
             <div className="flex flex-col justify-center">
                 <span className="bg-white opacity-100 rounded-md p-4">
                     <div className="flex justify-end">

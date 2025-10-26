@@ -42,10 +42,12 @@ export function Card({ title, link, type }: cardProps) {
               ></iframe>
             )}
             {type === "Twitter" && (
-              <blockquote className="twitter-tweet">
-                <a href={link}></a>
-              </blockquote>
-            )}
+  <div className="w-full max-h-[250px] overflow-auto">
+    <blockquote className="twitter-tweet w-full">
+      <a href={link}></a>
+    </blockquote>
+  </div>
+)}
             {type === "Linkedin" && (
               <iframe
                 src={link}
