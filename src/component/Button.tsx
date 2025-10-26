@@ -1,38 +1,38 @@
 export interface ButtonProps {
-    variant: "primary" | "secondary",
-    size: "sm" | "md" | "lg",
-    text: string,
-    startIcon?: any,
-    endIcon?: any,
-    onClick?: () => void,
-    fullWidth?: boolean,
-    className?: string
+  variant: "primary" | "secondary";
+  size: "sm" | "md" | "lg";
+  text: string;
+  startIcon?: any;
+  endIcon?: any;
+  onClick?: () => void;
+  fullWidth?: boolean;
+  className?: string;
 }
+
 const variantStyle = {
-    "primary": "bg-purple-600 text-white",
-    "secondary": "bg-purple-300 text-purple-600 ",
-}
-const defaultStyle = "rounded-lg flex font-light"
+  primary:
+    "bg-gradient-to-r from-cyan-400 to-indigo-500 text-black font-semibold hover:from-cyan-300 hover:to-indigo-400 shadow-[0_0_20px_rgba(56,189,248,0.3)] hover:shadow-[0_0_25px_rgba(56,189,248,0.5)]",
+  secondary:
+    "bg-white/10 text-slate-300 border border-white/10 hover:border-cyan-400/30 hover:text-cyan-300",
+};
+
 const sizeStyle = {
-    "sm": "py-1 px-2",
-    "md": "p-4",
-    "lg": "p-6",
-}
+  sm: "px-4 py-2 text-sm rounded-xl",
+  md: "px-6 py-3 text-base rounded-xl",
+  lg: "px-8 py-4 text-lg rounded-2xl",
+};
+
 export const Button = (props: ButtonProps) => {
-    return <button
-                
-                onClick={props.onClick} 
-                className={`${variantStyle[props.variant]} 
-                ${defaultStyle} 
-                ${sizeStyle[props.size]} ${props.fullWidth ? " w-full flex justify-center items-center" : ""}
-                `}> 
-            <div 
-                className="flex items-center">
-                {props.startIcon ? <div>{props.startIcon}</div> : null} 
-                <div 
-                    className="pl-1 pr-1"> 
-                    {props.text} 
-                </div>
-            </div>
-        </button>
-}
+  return (
+    <button
+      onClick={props.onClick}
+      className={`${variantStyle[props.variant]} ${sizeStyle[props.size]} ${
+        props.fullWidth ? "w-full" : ""
+      } flex items-center justify-center gap-2 transition-all duration-300 ${props.className || ""}`}
+    >
+      {props.startIcon && <span>{props.startIcon}</span>}
+      <span>{props.text}</span>
+      {props.endIcon && <span>{props.endIcon}</span>}
+    </button>
+  );
+};
