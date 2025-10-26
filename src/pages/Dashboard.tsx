@@ -15,7 +15,7 @@ function Dashboard() {
   const { platform } = useParams();
 
   const filteredContents = platform
-    ? contents.filter((content) => content.type.toLowerCase() === platform)
+    ? contents.filter((content:any) => content.type.toLowerCase() === platform)
     : contents;
 
   return (

@@ -5,7 +5,8 @@ export interface ButtonProps {
     startIcon?: any,
     endIcon?: any,
     onClick?: () => void,
-    fullWidth?: boolean
+    fullWidth?: boolean,
+    className?: string
 }
 const variantStyle = {
     "primary": "bg-purple-600 text-white",
