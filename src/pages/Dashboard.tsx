@@ -49,12 +49,15 @@ function Dashboard() {
 
   return (
     <div className="flex min-h-screen bg-[#05070a] text-slate-100 font-inter overflow-hidden relative">
+      {/* Background Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.08),transparent_30%),radial-gradient(circle_at_80%_80%,rgba(168,85,247,0.08),transparent_30%)] pointer-events-none" />
 
       <Sidebar />
 
       <main className="flex-1 ml-72 px-10 py-14 relative z-10">
         <CreateContentModal open={modalOpen} onClose={() => setModalOpen(false)} />
+
+        {/* Sticky Buttons */}
         <div className="fixed top-6 right-10 z-30 flex gap-4 bg-[#05070a]/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-[0_0_20px_rgba(56,189,248,0.2)] px-5 py-3">
           <Button
             startIcon={<ShareIcon size="md" />}
