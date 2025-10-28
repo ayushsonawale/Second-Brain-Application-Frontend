@@ -3,7 +3,7 @@ import { Button } from "../component/Button";
 import { BACKEND_URL } from "../config";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { User, Lock } from "lucide-react"; // ✅ Icon library
+import { User, Lock } from "lucide-react"; 
 
 export const Signup = () => {
   const usernameRef = useRef<HTMLInputElement>(null);

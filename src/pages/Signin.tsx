@@ -3,7 +3,7 @@ import { Button } from "../component/Button";
 import { BACKEND_URL } from "../config";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { User, Lock } from "lucide-react"; // ✅ Add icons
+import { User, Lock } from "lucide-react";
 
 export const Signin = () => {
   const usernameRef = useRef<HTMLInputElement>(null);

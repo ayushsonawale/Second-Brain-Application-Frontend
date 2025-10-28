@@ -3,10 +3,6 @@ import { Cpu, Activity, Sparkles, BookOpen, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-/**
- * Futuristic AI Landing Page — Dark Mode + Subtle Animated Orbs
- * Drop into src/pages/Home.tsx
- */
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -37,7 +33,7 @@ export const Home = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#0b0f14] text-slate-100">
-      {/* ===== Animated Background Orbs (subtle) ===== */}
+
       <div className="absolute inset-0 -z-10">
         {orb("o1", 680, "-10%", "-20%", "rgba(58, 123, 213, 0.12)", "rgba(124, 58, 237, 0.08)", 0)}
         {orb("o2", 520, "60%", "-10%", "rgba(0, 212, 255, 0.08)", "rgba(88, 28, 135, 0.06)", 2)}
@@ -45,7 +41,7 @@ export const Home = () => {
         {orb("o4", 300, "75%", "65%", "rgba(120, 255, 195, 0.05)", "rgba(0, 212, 255, 0.03)", 6)}
       </div>
 
-      {/* ===== Sticky Navbar (dark glass) ===== */}
+
       <nav
         className={`fixed w-full z-50 transition-all duration-300 ${
           isScrolled ? "backdrop-blur-md bg-black/60 shadow-lg" : "bg-black/30"
@@ -80,7 +76,7 @@ export const Home = () => {
         </div>
       </nav>
 
-      {/* ===== Hero Section ===== */}
+
       <header className="relative pt-28 pb-16 md:pt-36 md:pb-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid md:grid-cols-2 gap-10 items-center">
