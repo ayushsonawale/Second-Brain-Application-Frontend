@@ -1,1 +1,1 @@
-export const BACKEND_URL = 'https://second-brain-backend-git-main-ayushsonawales-projects.vercel.app/'
+export const BACKEND_URL = 'https://second-brain-backend-git-main-ayushsonawales-projects.vercel.app'
